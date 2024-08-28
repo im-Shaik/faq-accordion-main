@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  height: 100vh;
+  width: 100vw;
+  background: url(/assets/images/background-pattern-mobile.svg) repeat-x top
+    hsl(275, 100%, 97%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: hsl(0, 0%, 100%);
+  width: 330px;
+}
+
+.accordion .accordion-heading {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 50px;
+}
+
+.accordion .accordion-heading h1 {
+  color: hsl(292, 42%, 14%);
+  font-size: 34px;
+}
+
+.accordion .accordion-heading img {
+  width: 30px;
+}
+
+.accordion-content .accordion-item {
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid hsl(275, 100%, 97%);
+  cursor: pointer;
+  overflow: hidden;
+  min-height: 60px;
+  transition: min-height 0.7s;
+}
+.accordion-content .accordion-item.active {
+  min-height: 230px;
+}
+.accordion-content .accordion-item-heading h1 {
+  font-size: 18px;
+  color: hsl(292, 42%, 14%);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.accordion-content .accordion-item p {
+  font-size: 16px;
+  color: hsl(292, 16%, 49%);
+}
+
+@media only screen and (min-width: 375px) {
+  body {
+    background: url(/assets/images/background-pattern-desktop.svg) repeat-x top
+      hsl(275, 100%, 97%);
+    padding: 20px;
+  }
+
+  .container {
+    width: 600px;
+  }
+
+  .accordion-content .accordion-item {
+    height: 55px;
+  }
+}
