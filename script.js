@@ -7,7 +7,7 @@ accordionItems.forEach((item) => {
       i.classList.remove("active");
       const icon = i.firstElementChild.firstElementChild.firstElementChild;
       if (icon) {
-        icon.src = "/assets/images/icon-plus.svg";
+        icon.src = "./assets/images/icon-plus.svg";
       }
     });
 
@@ -15,7 +15,7 @@ accordionItems.forEach((item) => {
     item.classList.add("active");
     const icon = item.firstElementChild.firstElementChild.firstElementChild;
     if (icon) {
-      icon.src = "/assets/images/icon-minus.svg";
+      icon.src = "./assets/images/icon-minus.svg";
     }
   });
 });
